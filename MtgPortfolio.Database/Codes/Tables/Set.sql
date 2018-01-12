@@ -8,6 +8,7 @@
     [BorderId]        INT  NOT NULL,
     [MkmName]		  VARCHAR (160)  NOT NULL,
     [MkmId]			  INT  NOT NULL,
+	[GathererCode]    VARCHAR (20)  NULL,
     [CreatedBy]       VARCHAR (50)  CONSTRAINT [DF_Set_CreatedBy] DEFAULT (suser_name()) NOT NULL,
     [CreatedOn]       DATETIME      CONSTRAINT [DF_Set_CreatedOn] DEFAULT (getdate()) NOT NULL,
     [UpdatedBy]       VARCHAR (50)  CONSTRAINT [DF_Set_UpdatedBy] DEFAULT (suser_name()) NOT NULL,

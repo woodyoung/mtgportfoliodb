@@ -1,0 +1,29 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [Codes].[Set]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       unnamed constraint on [Codes].[Set] (Default Constraint)
+     Table rebuild
+       [Codes].[Set] (Table)
+
+** Supporting actions
+     Drop
+       [Codes].[DF_Set_CreatedBy] (Default Constraint)
+       [Codes].[DF_Set_CreatedOn] (Default Constraint)
+       [Codes].[DF_Set_UpdatedBy] (Default Constraint)
+       [Codes].[DF_Set_UpdatedOn] (Default Constraint)
+       [Codes].[FK_Set_Border] (Foreign Key)
+       [dbo].[FK_MtgCard_Set] (Foreign Key)
+       [dbo].[FK_MtgCardSets_Type] (Foreign Key)
+     Create
+       [Codes].[FK_Set_Border] (Foreign Key)
+       [dbo].[FK_MtgCard_Set] (Foreign Key)
+       [dbo].[FK_MtgCardSets_Type] (Foreign Key)
