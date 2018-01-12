@@ -1,0 +1,40 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [Codes].[Format]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[MtgCard] (Table)
+       [dbo].[MtgCardColors] (Table)
+       [dbo].[MtgCardLegalities] (Table)
+       [dbo].[MtgCardSets] (Table)
+       [dbo].[MtgCardSubtypes] (Table)
+       [dbo].[MtgCardSupertypes] (Table)
+       [dbo].[MtgCardTypes] (Table)
+     Table rebuild
+       [Codes].[Format] (Table)
+     Create
+       [Codes].[UQ_Border_Code] (Unique Constraint)
+       [Codes].[UQ_Color_Code] (Unique Constraint)
+       [Codes].[UQ_Layout_Code] (Unique Constraint)
+       [Codes].[UQ_Legality_Code] (Unique Constraint)
+       [Codes].[UQ_Rarity_Code] (Unique Constraint)
+       [Codes].[UQ_Set_Code] (Unique Constraint)
+       [Codes].[UQ_Subtype_Code] (Unique Constraint)
+       [Codes].[UQ_Supertype_Code] (Unique Constraint)
+       [Codes].[UQ_Type_Code] (Unique Constraint)
+
+** Supporting actions
+     Drop
+       [Codes].[DF_Format_CreatedBy] (Default Constraint)
+       [Codes].[DF_Format_CreatedOn] (Default Constraint)
+       [Codes].[DF_Format_UpdatedBy] (Default Constraint)
+       [dbo].[FK_MtgCardLegalities_Format] (Foreign Key)
+     Create
+       [dbo].[FK_MtgCardLegalities_Format] (Foreign Key)

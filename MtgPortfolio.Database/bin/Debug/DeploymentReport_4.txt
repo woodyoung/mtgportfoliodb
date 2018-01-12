@@ -1,0 +1,45 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[MtgCard]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[MtgCard] (Table)
+     Create
+       [Codes].[Supertype] (Table)
+       [dbo].[MtgCardSupertypes] (Table)
+       [Codes].[DF_Supertype_CreatedBy] (Default Constraint)
+       [Codes].[DF_Supertype_CreatedOn] (Default Constraint)
+       [Codes].[DF_Supertype_UpdatedBy] (Default Constraint)
+       [Codes].[DF_Supertype_UpdatedOn] (Default Constraint)
+       Default Constraint: unnamed constraint on [Codes].[Supertype] (Default Constraint)
+       [dbo].[FK_MtgCardSupertypes_Type] (Foreign Key)
+       [dbo].[FK_MtgCardSupertypes_MtgCard] (Foreign Key)
+
+** Supporting actions
+     Drop
+       [dbo].[DF_MtgCard_ConvertedManaCost] (Default Constraint)
+       [dbo].[DF_MtgCard_ManaCost] (Default Constraint)
+       [dbo].[FK_MtgCard_Layout] (Foreign Key)
+       [dbo].[FK_MtgCard_Rarity] (Foreign Key)
+       [dbo].[FK_MtgCard_Set] (Foreign Key)
+       [dbo].[FK_MtgCardSets_MtgCard] (Foreign Key)
+       [dbo].[FK_MtgCardSubtypes_MtgCard] (Foreign Key)
+       [dbo].[FK_MtgCardTypes_MtgCard] (Foreign Key)
+       [dbo].[FK_MtgCardColors_MtgCard] (Foreign Key)
+       [dbo].[FK_MtgCardLegalities_MtgCard] (Foreign Key)
+     Create
+       [dbo].[FK_MtgCard_Layout] (Foreign Key)
+       [dbo].[FK_MtgCard_Rarity] (Foreign Key)
+       [dbo].[FK_MtgCard_Set] (Foreign Key)
+       [dbo].[FK_MtgCardSets_MtgCard] (Foreign Key)
+       [dbo].[FK_MtgCardSubtypes_MtgCard] (Foreign Key)
+       [dbo].[FK_MtgCardTypes_MtgCard] (Foreign Key)
+       [dbo].[FK_MtgCardColors_MtgCard] (Foreign Key)
+       [dbo].[FK_MtgCardLegalities_MtgCard] (Foreign Key)
