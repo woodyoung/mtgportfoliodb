@@ -16,6 +16,7 @@
     [Toughness] DECIMAL(5, 2) NULL, 
 	[Loyalty] DECIMAL(5,2) NULL,
     [MultiverseId] BIGINT NULL ,
+	[BorderId] INT NULL,
 	[IsTimeShifted] BIT NOT NULL CONSTRAINT DF_MtgCard_IsTimeShifted DEFAULT 0 ,
 	[IsReserved] BIT NOT NULL CONSTRAINT DF_MtgCard_IsReserved DEFAULT 0 ,
 	[ReleaseDate] DATE NULL,
@@ -31,6 +32,7 @@
     [UpdatedOn]       DATETIME      CONSTRAINT [DF_MtgCard_UpdatedOn] DEFAULT (getdate()) NOT NULL,
 	--CONSTRAINT [UQ_Set_Code] UNIQUE NONCLUSTERED ([Code] ASC), Need to think about how to uniquely constrain this table
     CONSTRAINT PK_MtgCardId PRIMARY KEY CLUSTERED (MtgCardId ASC) ON [PRIMARY],
+	CONSTRAINT FK_MtgCard_Border FOREIGN KEY (BorderId) REFERENCES Codes.Border (BorderId),
 	CONSTRAINT FK_MtgCard_Layout FOREIGN KEY (LayoutId) REFERENCES Codes.Layout (LayoutId),
 	CONSTRAINT FK_MtgCard_Rarity FOREIGN KEY (RarityId) REFERENCES Codes.Rarity (RarityId),
 	CONSTRAINT FK_MtgCard_Set FOREIGN KEY (SetId) REFERENCES Codes.[Set] (SetId)

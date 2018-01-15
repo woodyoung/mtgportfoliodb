@@ -1,0 +1,39 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [Codes].[Set]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [Codes].[Set].[MkmId] is being dropped, data loss could occur.
+       The column [Codes].[Set].[MkmName] is being dropped, data loss could occur.
+       The column [Codes].[Set].[SetType] on table [Codes].[Set] must be added, but the column has no default value and does
+         not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either:
+         add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a
+         deployment option.
+
+** User actions
+     Drop
+       unnamed constraint on [Codes].[Set] (Default Constraint)
+     Table rebuild
+       [Codes].[Set] (Table)
+
+** Supporting actions
+     Drop
+       [Codes].[DF_Set_CreatedBy] (Default Constraint)
+       [Codes].[DF_Set_CreatedOn] (Default Constraint)
+       [Codes].[DF_Set_UpdatedBy] (Default Constraint)
+       [Codes].[DF_Set_UpdatedOn] (Default Constraint)
+       [dbo].[FK_MtgCard_Set] (Foreign Key)
+       [Codes].[FK_Set_Border] (Foreign Key)
+       [dbo].[FK_MtgCardSets_Type] (Foreign Key)
+     Create
+       [dbo].[FK_MtgCard_Set] (Foreign Key)
+       [Codes].[FK_Set_Border] (Foreign Key)
+       [dbo].[FK_MtgCardSets_Type] (Foreign Key)
+
+The column [Codes].[Set].[MkmId] is being dropped, data loss could occur.
+The column [Codes].[Set].[MkmName] is being dropped, data loss could occur.
+The column [Codes].[Set].[SetType] on table [Codes].[Set] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+
