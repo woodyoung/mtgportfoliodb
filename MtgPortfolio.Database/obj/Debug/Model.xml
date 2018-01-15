@@ -4452,6 +4452,46 @@
 			<AttachedAnnotation Disambiguator="108" />
 			<AttachedAnnotation Disambiguator="109" />
 			<AttachedAnnotation Disambiguator="110" />
+			<Annotation Type="SqlInlineIndexAnnotation" Disambiguator="125" />
+			<Annotation Type="SqlInlineIndexAnnotation" Disambiguator="126" />
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[MtgCard].[NI_MtgCard_MtgJsonId]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MtgCard].[MtgJsonId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[MtgCard]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="126" />
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[MtgCard].[NI_MtgCard_Name]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MtgCard].[Name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[MtgCard]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="125" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[MtgCardColors]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4728,11 +4768,11 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="125" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="127" />
 			<AttachedAnnotation Disambiguator="115" />
 			<AttachedAnnotation Disambiguator="113" />
 			<AttachedAnnotation Disambiguator="114" />
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="126" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="128" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[MtgCardSets]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4864,7 +4904,7 @@
 			</Relationship>
 			<AttachedAnnotation Disambiguator="117" />
 			<AttachedAnnotation Disambiguator="116" />
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="127" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="129" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[MtgCardSubtypes]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -5305,7 +5345,7 @@
 					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="125" />
+			<AttachedAnnotation Disambiguator="127" />
 		</Element>
 		<Element Type="SqlUniqueConstraint" Name="[dbo].[UQ_MtgCardId_SetId]">
 			<Relationship Name="ColumnSpecifications">
@@ -5338,7 +5378,7 @@
 					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="127" />
+			<AttachedAnnotation Disambiguator="129" />
 		</Element>
 		<Element Type="SqlUniqueConstraint" Name="[dbo].[UQ_MtgCardLegalities_MtgCardId_FormatId_LegalityId]">
 			<Relationship Name="ColumnSpecifications">
@@ -5380,7 +5420,7 @@
 					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="126" />
+			<AttachedAnnotation Disambiguator="128" />
 		</Element>
 	</Model>
 </DataSchemaModel>
