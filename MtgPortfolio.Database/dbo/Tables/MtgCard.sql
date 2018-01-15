@@ -4,7 +4,7 @@
 	[MtgJsonId] VARCHAR(50) NULL, 
     [LayoutId] INT NOT NULL, 
     [Name] VARCHAR(160) NULL, 
-    [ManaCost] VARCHAR(20) NOT NULL CONSTRAINT DF_MtgCard_ManaCost DEFAULT '' , 
+    [ManaCost] VARCHAR(20) NULL, 
     [ConvertedManaCost] DECIMAL(5, 2) NOT NULL CONSTRAINT DF_MtgCard_ConvertedManaCost DEFAULT 0,
     [Type] VARCHAR(100) NULL , 
     [RarityId] INT NOT NULL, 
