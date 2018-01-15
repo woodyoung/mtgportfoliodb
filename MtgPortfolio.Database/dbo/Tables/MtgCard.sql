@@ -35,5 +35,7 @@
 	CONSTRAINT FK_MtgCard_Border FOREIGN KEY (BorderId) REFERENCES Codes.Border (BorderId),
 	CONSTRAINT FK_MtgCard_Layout FOREIGN KEY (LayoutId) REFERENCES Codes.Layout (LayoutId),
 	CONSTRAINT FK_MtgCard_Rarity FOREIGN KEY (RarityId) REFERENCES Codes.Rarity (RarityId),
-	CONSTRAINT FK_MtgCard_Set FOREIGN KEY (SetId) REFERENCES Codes.[Set] (SetId)
+	CONSTRAINT FK_MtgCard_Set FOREIGN KEY (SetId) REFERENCES Codes.[Set] (SetId),
+	INDEX NI_MtgCard_Name NONCLUSTERED ([Name]),
+	INDEX NI_MtgCard_MtgJsonId NONCLUSTERED (MtgJsonId)
 )
